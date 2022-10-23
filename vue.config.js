@@ -12,9 +12,13 @@ module.exports = {
         performance: {
             hints:'warning',
             //入口起点的最大体积
-            maxEntrypointSize: 50000000,
+            maxEntrypointSize: 5000000000,
             //生成文件的最大体积
-            maxAssetSize: 30000000,
+            maxAssetSize: 3000000000,
+            
+            hints: 'error', 
+            maxAssetSize: 500000000, // 整数类型（以字节为单位）
+            maxEntrypointSize: 5000000000, // 整数类型（以字节为单位）
             //只给出 js 文件的性能提示
             assetFilter: function(assetFilename) {
                 return assetFilename.endsWith('.js');
